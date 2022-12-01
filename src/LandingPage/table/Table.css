@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.tableHeader {
+  width: 100%;
+}
+.stick {
+  position: sticky;
+  top: 0.2rem;
+  background-color: #ece9ec;
+  height: 100px !important;
+
+}
+.tableHeaderName {
+  width: 13% !important;
+  font-size: 0.77rem;
+  text-align: left !important;
+  padding-left: 5px;
+}
+.tableHeader > :first-child {
+  width: 2% !important;
+
+}
+.tableHeader > th {
+  width: 7.14%;
+  text-align: center;
+  border: 1px solid #000000 !important;
+
+}
+.weeks {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 30px;
+
+}
+.weeks > p {
+  color: #735773;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 6%;
+  width: 20px;
+  height: 20px;
+
+}
+.currentMonth {
+  background-color: #7e637e;
+  color: white;
+}

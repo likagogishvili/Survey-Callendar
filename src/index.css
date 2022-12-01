@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "FiraGO";
+  src: local("FiraGO"),
+    url("./assets/fonts/FiraGO-SemiBold.woff") format("truetype");
+}
+
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "FiraGO";
+  font-feature-settings: "case" on;
+}
+
+::selection {
+  background: #dec5fa;
+}
+body::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #735773; /* color of the scroll thumb */
+}
+html,
+input,
+label,
+select,
+option {
+  cursor: url("assets/cursors/cursor.cur"), auto !important;
+}
+a,
+.header_icons,
+button,
+path,
+svg,
+rect,
+.boxes1,
+.boxes2,
+.boxes3,
+.boxes4,
+.boxes5,
+.boxes,
+tspan {
+  cursor: url("assets/cursors/cursorPointer.cur"), auto !important;
+}

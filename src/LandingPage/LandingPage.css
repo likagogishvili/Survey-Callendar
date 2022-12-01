@@ -1,0 +1,123 @@
+.boxes1 {
+  height: 35px;
+  width: 35px;
+  background-image: url("../assets/boxImeages/box1.PNG");
+  background-repeat: no-repeat;
+  text-align: center;
+  cursor: pointer;
+}
+
+.boxes2 {
+  height: 35px;
+  width: 35px;
+  background-image: url("../assets/boxImeages/box2.PNG");
+  background-repeat: no-repeat;
+  text-align: center;
+  cursor: pointer;
+}
+
+.boxes3 {
+  height: 35px;
+  width: 35px;
+  background-image: url("../assets/boxImeages/box3.PNG");
+  background-repeat: no-repeat;
+  text-align: center;
+  cursor: pointer;
+}
+.boxes4 {
+  height: 35px;
+  width: 35px;
+  background-image: url("../assets/boxImeages/box4.PNG");
+  cursor: pointer;
+}
+.boxes5 {
+  height: 35px;
+  width: 35px;
+  background-color: rgb(151, 153, 155);
+  cursor: pointer;
+}
+.tableItem {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 3px;
+  border-radius: 50%;
+}
+
+.tableItem0 {
+  background-image: url("../assets/boxImeages/box1.PNG");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.tableItem1 {
+  background-image: url("../assets/boxImeages/box2.PNG");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.tableItem2 {
+  background-image: url("../assets/boxImeages/box3.PNG");
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.tableItem3 {
+  background-image: url("../assets/boxImeages/box4.PNG");
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.crossed {
+  text-decoration: line-through;
+}
+.sel {
+  width: 10%;
+  height: 40px;
+  font-size: 1.1rem;
+  font-family: "FiraGO";
+  font-feature-settings: "case" on;
+  background-color: #857185;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 0.2%;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boxes {
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  min-width: 10%;
+  display: flex;
+}
+.selectSmall {
+  margin-left: 0.2%;
+}
+.header_icons {
+  height: 25px;
+  width: 25px;
+  display: block;
+  background: no-repeat center;
+  background-size: 25px;
+}
+.iconsDiv {
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+@media only screen and (max-width: 600px) {
+  .sel {
+    width: 30%;
+  }
+  .selectSmall {
+    flex-direction: column;
+  }
+  .boxes {
+    flex-direction: column;
+    width: 100%;
+  }
+}
