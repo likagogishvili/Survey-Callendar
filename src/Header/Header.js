@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { counterActions } from "../store/index";
 import { FacebookShareButton } from "react-share";
 
-function Header() {
+function Header(props) {
   const [languageChange, SetLanguageChange] = useState(false);
 
   let navigate = useNavigate();
@@ -26,6 +26,7 @@ function Header() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  let curUrl = window.location.href
 
   useEffect(() => {
     window.sessionStorage.setItem("languageChange", languageChange);
@@ -34,7 +35,11 @@ function Header() {
   function LanguageChangeRender(e = null) {
     let currentLang = params.lang === "en" ? "ka" : "en";
     SetLanguageChange(!languageChange);
-    return navigate(`/${currentLang}`, { replace: true });
+    if (!curUrl.includes("census")) {
+      return navigate(`/${currentLang}`, { replace: true });
+    } else {
+      return navigate(`/${currentLang}/census`, { replace: true });
+    }
   }
 
   const dispatch = useDispatch();
@@ -42,20 +47,30 @@ function Header() {
     dispatch(counterActions.SetLanguageChange(languageChange));
     // eslint-disable-next-line
   }, [languageChange, dispatch]);
-  let curUrl = window.location.href
   return (
     <div>
+
       <title>
         {!languageChange
           ? "საქსტატის გამოკვლევების საველე სამუშაოების კალენდარი"
           : "Calendar of Fieldworks of Geostat Surveys"}
       </title>
 
-      <p className="fs-3 mt-4 text-center" style={{ color: "rgb(115,87,115)" }}>
-        {!languageChange
-          ? "საქსტატის გამოკვლევების საველე სამუშაოების კალენდარი"
-          : "Calendar of Fieldworks of Geostat Surveys"}
-      </p>
+      {
+        props.showHeader ?
+          <p className="fs-3 mt-4 text-center" style={{ color: "rgb(115,87,115)" }}>
+            {!languageChange
+              ? "საქსტატის გამოკვლევების საველე სამუშაოების კალენდარი"
+              : "Calendar of Fieldworks of Geostat Surveys"}
+          </p> :
+          <p className="fs-3 mt-4 text-center" style={{ color: "rgb(115,87,115)" }}>
+            {!languageChange
+              ? "მოსახლეობის 2024 საყოველთაო აღწერა"
+              : "Population Census 2024"}
+          </p>
+
+      }
+
       <div className="logo">
         <img src={!languageChange ? logo : logoEng} alt="" />
       </div>

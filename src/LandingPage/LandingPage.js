@@ -3,10 +3,13 @@ import "./LandingPage.css";
 import { useState, useEffect } from "react";
 import Header from "../Header/Header";
 import { useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router";
 function LandingPage({ renderer, Setrenderer, types, namesArray }) {
   const language = useSelector((state) => state.currentLanguage);
   const [itemClicked, SetItemClicked] = useState({});
   const [selectedMonth, setSelectedMonth] = useState("");
+  let params = useParams();
+  let navigate = useNavigate();
 
   let typeLocal = [];
   if (!language) {
@@ -127,14 +130,32 @@ function LandingPage({ renderer, Setrenderer, types, namesArray }) {
     ];
   }
 
+
+  ///redirect to census page
+  function RedirectToCensusPage() {
+    let url = window.location.pathname;
+    if (!url.includes("census")) {
+      if (params.lang) {
+        // eslint-disable-next-line
+        navigate(url + "/census");
+      } else {
+        // eslint-disable-next-line
+        navigate(url + "ka" + "/census");
+      }
+    }
+  }
+
+
   return (
     <div>
-      <Header />
-
+      <Header showHeader = {true}/>
       <div className="fs-5 m-1 mt-5 mb-4 row">
+      <button type="button" className="btn mx-3 mb-3" onClick={RedirectToCensusPage} style={{width:'fit-content', backgroundColor:'#735773', color:'#fff'}}>{language ? "Population Census 2024" : "მოსახლეობის 2024 საყოველთაო აღწერა"} </button>
+
         <p style={{ marginLeft: "0.2%" }}>
           {language ? "Periodicity" : "პერიოდულობის აღნიშვნა"}
         </p>
+
         <div className="d-flex text-center selectSmall pt-3">
           <div
             className="boxes"

@@ -1,7 +1,6 @@
 import "../LandingPage.css";
 
 function ChildOfTable(props) {
-  
   const findIndexByType = (type) => {
     return props.types.findIndex((elm) => elm === type);
   };
