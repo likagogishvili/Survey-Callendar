@@ -1,5 +1,7 @@
 
 import { dataCansus } from './data'
+
+import "../LandingPage/LandingPage.css";
 function ListItemsCensus(props) {
     function hideElement(id) {
         if (props.selectedMonth === "") return "";
@@ -24,10 +26,10 @@ function ListItemsCensus(props) {
                                 return (
                                     <th style={{ display: hideElement(index + 1) }}>
                                         <div className={"weeks"}>
-                                            <p>{w.week1 ? 'x' : ''}</p>
-                                            <p>{w.week2 ? 'x' : ''}</p>
-                                            <p>{w.week3 ? 'x' : ''}</p>
-                                            <p>{w.week4 ? 'x' : ''}</p>
+                                            {w.week1 ? <div className='tableItem tableItem2'></div> : <div></div>}
+                                            {w.week2 ? <div className='tableItem tableItem2'></div> : <div></div>}
+                                            {w.week3 ? <div className='tableItem tableItem2'></div> : <div></div>}
+                                            {w.week4 ? <div className='tableItem tableItem2'></div> : <div></div>}
                                         </div>
                                     </th>
                                 )
