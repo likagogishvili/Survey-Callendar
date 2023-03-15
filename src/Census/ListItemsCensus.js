@@ -25,11 +25,11 @@ function ListItemsCensus(props) {
                             i.map((w, index) => {
                                 return (
                                     <th style={{ display: hideElement(index + 1) }}>
-                                        <div className={"weeks"}>
-                                            {w.week1 ? <div className='tableItem tableItem2'></div> : <div></div>}
-                                            {w.week2 ? <div className='tableItem tableItem2'></div> : <div></div>}
-                                            {w.week3 ? <div className='tableItem tableItem2'></div> : <div></div>}
-                                            {w.week4 ? <div className='tableItem tableItem2'></div> : <div></div>}
+                                        <div className="weeks ">
+                                            {w.week1 ? <div className='tableItem tableItem2'></div> : <div style={{ visibility: 'hidden' }}>111</div>}
+                                            {w.week2 ? <div className='tableItem tableItem2'></div> : <div style={{ visibility: 'hidden' }}>111</div>}
+                                            {w.week3 ? <div className='tableItem tableItem2'></div> : <div style={{ visibility: 'hidden' }}>111</div>}
+                                            {w.week4 ? <div className='tableItem tableItem2'></div> : <div style={{ visibility: 'hidden' }}>111</div>}
                                         </div>
                                     </th>
                                 )
