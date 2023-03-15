@@ -72,7 +72,9 @@ function Header(props) {
       }
 
       <div className="logo">
+      <a href="/">
         <img src={!languageChange ? logo : logoEng} alt="" />
+        </a>
       </div>
       <div className="iconsDiv">
         <FacebookShareButton url={curUrl}>
