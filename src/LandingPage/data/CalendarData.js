@@ -128,7 +128,7 @@ function CalendarData() {
   let types = ["ყოველთვიური", "კვარტალური", "წლიური", "ერთდროული"];
   const [renderer, SetRenderer] = useState([]);
 
-  console.log(namesArray.findIndex((x) => x === 'სასტუმროებისა და სასტუმროს ტიპის დაწესებულებების გამოკვლევა')); // 1);
+  // console.log(namesArray.findIndex((x) => x === 'სასტუმროებისა და სასტუმროს ტიპის დაწესებულებების გამოკვლევა')); // 1);
 
   useEffect(() => {
     SetRenderer([
